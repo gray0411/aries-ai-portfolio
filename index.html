@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Gray - AI Content & Creative Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Dark slate text */
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out;
+        }
+        .card {
+            @apply bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out;
+        }
+        .section-heading {
+            @apply text-4xl font-bold text-center text-gray-800 mb-12;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            border-radius: 0.75rem; /* Rounded corners for images */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Aries Gray</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition duration-300">Portfolio</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 md:py-32 text-center shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                Transform Your Vision into Reality with AI
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+                Expert AI-powered content, stunning visuals, and precise prompt engineering to elevate your brand and projects.
+            </p>
+            <a href="#contact" class="btn-primary inline-block text-lg">Let's Create Something Amazing</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-heading">My AI-Powered Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="text-blue-600 text-5xl mb-4">✨</div> <!-- Placeholder icon -->
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Custom AI Images</h3>
+                    <p class="text-gray-600">Generate unique, high-quality visuals for social media, ads, websites, and more using DALL-E 3 & Leonardo.Ai.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-purple-600 text-5xl mb-4">✍️</div> <!-- Placeholder icon -->
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">AI-Assisted Content</h3>
+                    <p class="text-gray-600">Craft engaging social media captions, ad copy, articles, and outlines with expertly refined AI-generated text.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-green-600 text-5xl mb-4">💡</div> <!-- Placeholder icon -->
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">Prompt Engineering</h3>
+                    <p class="text-gray-600">Unlock the full potential of AI with precisely engineered prompts for targeted, high-quality outputs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="section-heading">My Work</h2>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1: Earbuds (from your actual generation) -->
+                <div class="portfolio-item card">
+                    <img src="https://placehold.co/600x400/E0F2F7/000?text=Your+Earbuds+Image" alt="AI Generated Earbuds" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sleek Product Visualization</h3>
+                    <p class="text-gray-600 text-sm">Ultra-realistic studio shot for e-commerce or marketing campaigns.</p>
+                </div>
+                <!-- Portfolio Item 2: Alien Landscape (placeholder) -->
+                <div class="portfolio-item card">
+                    <img src="https://placehold.co/600x400/E0F2F7/000?text=Your+Alien+Landscape+Image" alt="AI Generated Alien Landscape" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Conceptual Art & Design</h3>
+                    <p class="text-gray-600 text-sm">Breathtaking sci-fi landscape for creative projects or game concepts.</p>
+                </div>
+                <!-- Portfolio Item 3: Cafe Woman (placeholder) -->
+                <div class="portfolio-item card">
+                    <img src="https://placehold.co/600x400/E0F2F7/000?text=Your+Cafe+Woman+Image" alt="AI Generated Cafe Woman" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Engaging Character Vignettes</h3>
+                    <p class="text-gray-600 text-sm">Whimsical illustration perfect for blog posts or social media stories.</p>
+                </div>
+                <!-- Portfolio Item 4: AI Prompt Example (Placeholder for PDF link) -->
+                <div class="portfolio-item card flex flex-col justify-between items-center text-center p-6">
+                    <div class="text-blue-600 text-5xl mb-4">📄</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sample ChatGPT Prompt</h3>
+                    <p class="text-gray-600 text-sm mb-4">See how I craft precise prompts for targeted AI text generation.</p>
+                    <a href="https://example.com/your-prompt-pdf.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">View PDF Example</a>
+                </div>
+                <!-- Portfolio Item 5: AI Content Example (Placeholder for PDF link) -->
+                <div class="portfolio-item card flex flex-col justify-between items-center text-center p-6">
+                    <div class="text-purple-600 text-5xl mb-4">📝</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">AI-Generated Content Sample</h3>
+                    <p class="text-gray-600 text-sm mb-4">Review examples of high-quality, AI-assisted written content.</p>
+                    <a href="https://example.com/your-content-pdf.pdf" target="_blank" class="text-blue-600 hover:underline font-medium">View PDF Example</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://www.fiverr.com/yourusername" target="_blank" class="btn-primary inline-block text-lg">Visit My Fiverr Gig</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="section-heading">About Aries Gray</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                With **15+ years of diverse professional experience** spanning project management, data analysis, and customer relations, I bring a unique blend of analytical rigor and creative problem-solving to every project. My recent certifications in AI, digital marketing, and social media management empower me to deliver cutting-edge solutions.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                I am passionate about leveraging technology to streamline operations, enhance digital presence, and help businesses and individuals achieve their goals efficiently. My commitment is to provide not just a service, but a partnership focused on delivering exceptional, tangible results.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-4xl font-bold mb-8">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8">
+                Let's connect and discuss how AI-powered content and visuals can transform your ideas.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="mailto:villapandoariesgray@gmail.com" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">
+                    Email Me: villapandoariesgray@gmail.com
+                </a>
+                <a href="https://wa.me/639457286701" target="_blank" class="btn-primary bg-white text-green-600 hover:bg-gray-100">
+                    WhatsApp: +63 945-728-6701
+                </a>
+            </div>
+            <p class="text-sm mt-8">
+                You can also find me on <a href="https://www.fiverr.com/yourusername" target="_blank" class="underline hover:text-gray-200">Fiverr</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Aries Gray. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
