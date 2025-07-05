@@ -60,7 +60,9 @@
             width: auto;
         }
         .form-input {
-            @apply w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600;
+            /* Ensure text is visible when typing */
+            @apply w-full p-4 bg-gray-700 border border-gray-600 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600;
+            color: #1a1a1a !important; /* Explicitly set text color to dark charcoal and force it */
         }
         /* Social icon styling for Font Awesome icons */
         .social-icon i {
@@ -79,6 +81,20 @@
         .social-icon:hover img {
             filter: none; /* Reverts to original (black) on hover */
             transform: scale(1.1); /* Slight scale up on hover */
+        }
+
+        /* Message Box for Form Submission Feedback */
+        #form-message-box {
+            @apply fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden;
+        }
+        #form-message-box.show {
+            display: flex;
+        }
+        #form-message-content {
+            @apply bg-gray-800 p-8 rounded-lg shadow-xl text-center max-w-sm mx-auto;
+        }
+        #form-message-box button {
+            @apply mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300;
         }
     </style>
 </head>
@@ -114,8 +130,12 @@
 
             <div class="card p-8 md:p-12 mb-16">
                 <h2 class="text-gradient text-3xl font-bold text-center mb-8">Send Me a Message</h2>
-                <!-- Netlify Form Integration: Add data-netlify="true" and remove action attribute -->
-                <form method="POST" data-netlify="true" class="space-y-6">
+                <!-- Netlify Form Integration -->
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6" id="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <div hidden>
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    </div>
                     <div>
                         <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" class="form-input" required>
@@ -153,9 +173,9 @@
                     <a href="https://www.instagram.com/grey_worm4624" target="_blank" class="social-icon" aria-label="Instagram Profile">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <!-- Fiverr (Font Awesome) -->
+                    <!-- Fiverr (PNG Image - User must provide transparent PNG) -->
                     <a href="https://www.fiverr.com/sellers/ariesgray0411" target="_blank" class="social-icon" aria-label="Fiverr Profile">
-                        <i class="fab fa-fiverr"></i>
+                        <img src="images/fiverr-logo.png" alt="Fiverr Logo">
                     </a>
                     <!-- Ko-fi (PNG Image - User must provide transparent PNG) -->
                     <a href="https://ko-fi.com/thegraaayyviieffect" target="_blank" class="social-icon" aria-label="Ko-fi Profile">
@@ -177,10 +197,63 @@
     <!-- Footer (Consistent across all pages) -->
     <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
         <div class="container mx-auto px-4">
-            <p>&copy; 2025 Aries Gray. All rights reserved.</p>
+            <p>&copy; 2025 Aries Gray Villapando. All rights reserved.</p>
             <p class="text-sm mt-2">Powered by AI Innovation & Strategic Growth.</p>
         </div>
     </footer>
 
+    <!-- Message Box HTML -->
+    <div id="form-message-box">
+        <div id="form-message-content">
+            <h3 class="text-xl font-bold mb-4" id="message-title"></h3>
+            <p id="message-text"></p>
+            <button id="message-close-btn">OK</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const messageBox = document.getElementById('form-message-box');
+            const messageTitle = document.getElementById('message-title');
+            const messageText = document.getElementById('message-text');
+            const messageCloseBtn = document.getElementById('message-close-btn');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault(); // Prevent default form submission
+
+                const formData = new FormData(form);
+                const encodedData = new URLSearchParams(formData).toString();
+
+                try {
+                    // Netlify requires submission to the root URL for forms defined with data-netlify="true"
+                    const response = await fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: encodedData
+                    });
+
+                    if (response.ok) {
+                        messageTitle.textContent = 'Success!';
+                        messageText.textContent = 'Your message has been sent. Thank you!';
+                        form.reset(); // Clear the form
+                    } else {
+                        messageTitle.textContent = 'Error!';
+                        messageText.textContent = 'There was a problem sending your message. Please try again later.';
+                    }
+                } catch (error) {
+                    messageTitle.textContent = 'Error!';
+                    messageText.textContent = 'Network error. Please check your connection and try again.';
+                    console.error('Form submission error:', error);
+                } finally {
+                    messageBox.classList.add('show'); // Show the message box
+                }
+            });
+
+            messageCloseBtn.addEventListener('click', function() {
+                messageBox.classList.remove('show'); // Hide the message box
+            });
+        });
+    </script>
 </body>
 </html>
