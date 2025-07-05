@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Gray - About Me</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for body, Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Color Palette & Font Setup (Consistent with index.html) */
+        :root {
+            --color-dark-bg: #1a1a1a; /* Deep Charcoal */
+            --color-light-text: #f8fafc; /* Off-white */
+            --color-accent-teal: #00C2B8; /* From Graaayy-Vii logo */
+            --color-accent-gold: #FFD700; /* From Graaayy-Vii logo */
+            --color-card-bg: #212121; /* Slightly lighter dark for cards */
+            --color-light-section-bg: #2c2c2c; /* Background for sections that need contrast */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark-bg);
+            color: var(--color-light-text);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-light-text);
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-purple-800 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .card {
+            @apply bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out border border-gray-700;
+        }
+        /* This class applies the gradient effect to any text it's applied to */
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .header-logo {
+            height: 40px;
+            width: auto;
+        }
+        .icon-small {
+            font-size: 2.5rem; /* Smaller icon size for detailed lists */
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .certification-item {
+            @apply flex items-center space-x-4 p-4 bg-gray-700 rounded-lg shadow-md;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation (Consistent across all pages) -->
+    <header class="bg-gray-900 shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="images/the-graaayy-vii-effect-logo.png" alt="The Graaayy-Vii Effect Logo" class="header-logo">
+                <span class="text-2xl font-bold text-white hidden md:block">Aries Gray</span>
+            </a>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="services.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Services</a></li>
+                    <li><a href="portfolio.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Portfolio</a></li>
+                    <li><a href="about.html" class="text-blue-600 font-semibold transition duration-300">About</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Me Content -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <!-- Main H1 Heading -->
+            <h1 class="text-gradient text-5xl md:text-6xl font-extrabold text-center mb-16 leading-tight">Meet Aries Gray: <span class="text-4xl md:text-5xl font-bold">Your Partner in AI Innovation & Strategic Growth</span></h1>
+
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg mb-12 border border-gray-700">
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    With over <b>15 years of diverse professional experience</b> spanning project management, data analysis, and customer relations, I bring a unique blend of strategic thinking, meticulous organization, and client-focused dedication to the world of Artificial Intelligence. My journey into AI is driven by a passion for leveraging cutting-edge technology to solve real-world problems and unlock unprecedented creative and operational efficiencies for businesses and individuals.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    I am not just an AI tool operator; I am a <b>certified AI strategist and digital content specialist</b> committed to understanding your unique vision and translating it into tangible, high-impact results. My background ensures that every project is managed with precision, delivered with excellence, and aligned perfectly with your objectives.
+                </p>
+            </div>
+
+            <!-- H2 Heading -->
+            <h2 class="text-gradient text-4xl md:text-5xl font-bold text-center mb-10">My Core Expertise & Certifications</h2>
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+                My commitment to delivering top-tier results is grounded in a robust foundation of professional experience and specialized certifications in high-demand areas.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- AI & Digital Expertise -->
+                <div class="card">
+                    <h3 class="text-gradient text-2xl font-semibold mb-4">AI & Digital Transformation</h3>
+                    <ul class="space-y-4">
+                        <li class="certification-item">
+                            <i class="fas fa-brain icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">AI Strategy & Implementation</h4>
+                                <p class="text-gray-400 text-sm">Mastering the strategic application of AI for business growth and innovation.</p>
+                            </div>
+                        </li>
+                        <li class="certification-item">
+                            <i class="fas fa-code icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">Prompt Engineering</h4>
+                                <p class="text-gray-400 text-sm">Crafting precise, optimized instructions to unlock optimal AI output for any task.</p>
+                            </div>
+                        </li>
+                        <li class="certification-item">
+                            <i class="fas fa-chart-line icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">Digital Marketing & Social Media Management</h4>
+                                <p class="text-gray-400 text-sm">Ensuring AI-generated assets drive real engagement and measurable results online.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Professional & Foundational Skills -->
+                <div class="card">
+                    <h3 class="text-gradient text-2xl font-semibold mb-4">Professional & Foundational Skills</h3>
+                    <ul class="space-y-4">
+                        <li class="certification-item">
+                            <i class="fas fa-project-diagram icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">Project Management Methodologies</h4>
+                                <p class="text-gray-400 text-sm">Guaranteed organized, on-time, and on-budget delivery for every project.</p>
+                            </div>
+                        </li>
+                        <li class="certification-item">
+                            <i class="fas fa-database icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">Data Analysis Foundations</h4>
+                                <p class="text-gray-400 text-sm">Leveraging data insights to inform strategic decisions and content creation.</p>
+                            </div>
+                        </li>
+                        <li class="certification-item">
+                            <i class="fas fa-headset icon-small"></i>
+                            <div>
+                                <h4 class="text-lg font-medium text-white">Advanced Customer Relations</h4>
+                                <p class="text-gray-400 text-sm">Building strong client relationships through clear communication and proactive support.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- My Commitment & Adaptability - Enhanced for Conversion -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 text-center">
+                <!-- H3 Heading with gradient and size -->
+                <h3 class="text-gradient text-4xl md:text-5xl font-bold mb-6 leading-tight">Your Investment, My Commitment: Unwavering Quality & Growth</h3>
+                <p class="text-xl text-gray-300 leading-relaxed mb-6">
+                    While I bring a wealth of certified expertise and a proven track record in project execution, I understand that some projects may require highly specialized or niche experience. My core strength lies in my <b><i>rapid adaptability, meticulous approach, and unwavering commitment to excellence.</i></b> I thrive on new challenges and am genuinely enthusiastic about expanding my skill set to meet your unique needs.
+                </p>
+                <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                    <b><i>For projects requiring specific, evolving expertise:</i></b> I am not just willing, but <b><i>eager to be trained and to quickly master new requirements</i></b> you might have. My extensive background in managing complex tasks ensures that even unfamiliar territory is navigated with precision, a focus on efficient learning, and a dedication to your success. You gain a partner who is invested in continuous improvement, ensuring your project benefits from the latest insights and a fresh perspective.
+                </p>
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    My promise is to deliver <b><i>premium, impactful outcomes</i></b> that consistently exceed expectations. This commitment to quality, combined with my efficiency and adaptability, ensures your investment is not just budget-friendly, but truly yields superior results that position you at the forefront of your industry.
+                </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <!-- H2 Heading with gradient -->
+                <h2 class="text-gradient text-4xl md:text-5xl font-bold mb-6">Ready to Collaborate?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's discuss how my unique blend of AI expertise, professional dedication, and commitment to learning can elevate your next project.
+                </p>
+                <a href="contact.html" class="btn-primary inline-block text-lg">Schedule Your Free Consultation</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Aries Gray. All rights reserved.</p>
+            <p class="text-sm mt-2">Powered by AI Innovation & Strategic Growth.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

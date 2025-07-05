@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Gray - Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for body, Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Color Palette & Font Setup (Consistent across all pages) */
+        :root {
+            --color-dark-bg: #1a1a1a; /* Deep Charcoal */
+            --color-light-text: #f8fafc; /* Off-white */
+            --color-accent-teal: #00C2B8; /* From Graaayy-Vii logo */
+            --color-accent-gold: #FFD700; /* From Graaayy-Vii logo */
+            --color-card-bg: #212121; /* Slightly lighter dark for cards */
+            --color-light-section-bg: #2c2c2c; /* Background for sections that need contrast */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark-bg);
+            color: var(--color-light-text);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-light-text);
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-purple-800 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .card {
+            @apply bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out border border-gray-700;
+        }
+        /* The .section-heading class is no longer applied to the H1 on this page,
+           but remains defined if needed elsewhere or for other H2s */
+        .section-heading {
+            @apply text-5xl md:text-6xl font-extrabold text-center mb-16 leading-tight;
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .header-logo {
+            height: 40px;
+            width: auto;
+        }
+        .icon-large {
+            font-size: 3.5rem; /* Adjust icon size */
+            margin-bottom: 1rem;
+            display: inline-block;
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation (Consistent across all pages) -->
+    <header class="bg-gray-900 shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="images/the-graaayy-vii-effect-logo.png" alt="The Graaayy-Vii Effect Logo" class="header-logo">
+                <span class="text-2xl font-bold text-white hidden md:block">Aries Gray</span>
+            </a>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="services.html" class="text-blue-600 font-semibold transition duration-300">Services</a></li>
+                    <li><a href="portfolio.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Portfolio</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Page Content -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <!-- Main H1 heading now matches H2 size -->
+            <h1 class="text-gradient text-3xl font-bold text-center mb-16 leading-tight">My AI-Powered Services: Elevate Your Digital Presence</h1>
+
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+                Discover how cutting-edge Artificial Intelligence, combined with strategic insight, can transform your vision into compelling visuals and impactful content.
+            </p>
+
+            <div class="grid md:grid-cols-1 gap-12">
+                <!-- Service 1: Custom AI Images -->
+                <div class="card flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0 text-center">
+                        <i class="fas fa-image icon-large"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-gradient text-3xl font-bold mb-4">Custom AI Images: Visuals That Captivate</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            In today's visually-driven world, unique and high-quality imagery is paramount. I specialize in generating bespoke AI images tailored precisely to your brand, campaign, or project needs. From ultra-realistic product mockups that sell, to imaginative conceptual art that inspires, I leverage advanced AI tools like DALL-E 3 and Leonardo.Ai to create stunning visuals that stand out in a crowded digital landscape.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 text-base">
+                            <li><b>Product Visualizations:</b> Realistic renders for e-commerce, advertising, and presentations.</li>
+                            <li><b>Conceptual & Abstract Art:</b> Unique visuals for branding, book covers, or creative projects.</li>
+                            <li><b>Character & Scene Design:</b> Custom illustrations for stories, games, or marketing.</li>
+                            <li><b>Marketing & Social Media Graphics:</b> Eye-catching images optimized for engagement.</li>
+                            <li><b>Backgrounds & Textures:</b> Custom backdrops to enhance your designs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: AI-Assisted Content: Words That Convert -->
+                <div class="card flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0 text-center">
+                        <i class="fas fa-pen-nib icon-large"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-gradient text-3xl font-bold mb-4">AI-Assisted Content: Words That Convert</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            Compelling content is the cornerstone of effective communication. I combine the speed and scale of AI with human strategic insight to craft engaging, high-quality text for a diverse range of applications. Whether you need concise social media captions, persuasive ad copy, structured articles, or detailed outlines, my AI-assisted approach ensures your message is clear, impactful, and perfectly aligned with your audience.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 text-base">
+                            <li><b>Social Media Engagement:</b> Captions, posts, and stories optimized for platforms like Instagram, Facebook, LinkedIn.</li>
+                            <li><b>High-Impact Ad Copy:</b> Headlines and body text designed to drive clicks and conversions.</li>
+                            <li><b>Blog Post & Article Outlines:</b> Structured frameworks for long-form content.</li>
+                            <li><b>Email Marketing Snippets:</b> Engaging copy for newsletters and promotional emails.</li>
+                            <li><b>Website Microcopy:</b> Concise, effective text for buttons, forms, and navigation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Prompt Engineering: Unlocking AI's Full Potential -->
+                <div class="card flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0 text-center">
+                        <i class="fas fa-lightbulb icon-large"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-gradient text-3xl font-bold mb-4">Prompt Engineering: Unlocking AI's Full Potential</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            The true power of AI models lies in the precision of the prompts they receive. I specialize in the art and science of prompt engineering, crafting highly optimized instructions for large language models (like ChatGPT) to ensure you get accurate, relevant, and high-quality outputs every single time. Save countless hours of trial-and-error and get exactly what you need with expertly designed prompts that guide the AI effectively.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 text-base">
+                            <li><b>Custom Prompt Development:</b> Tailored prompts for specific tasks and desired outcomes.</li>
+                            <li><b>Prompt Optimization:</b> Refining existing prompts for better efficiency and quality.</li>
+                            <li><b>AI Workflow Integration:</b> Designing prompts for seamless integration into your existing processes.</li>
+                            <li><b>Creative & Brainstorming Prompts:</b> Unleashing AI's creativity for new ideas.</li>
+                            <li><b>Structured Data Extraction Prompts:</b> Getting precise, organized information from AI.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <h2 class="text-gradient text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Project?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's discuss your specific needs and how my AI expertise can deliver exceptional value.
+                </p>
+                <a href="contact.html" class="btn-primary inline-block text-lg">Get a Free Consultation</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Aries Gray. All rights reserved.</p>
+            <p class="text-sm mt-2">Powered by AI Innovation & Strategic Growth.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

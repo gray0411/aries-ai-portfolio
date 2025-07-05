@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aries Gray - Contact</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for body, Montserrat for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons (Single, Correct CDN Link) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6TaYFAW2aeFGADyGrPkNpFDgSDcIfDraBvOJRtW7HzA4qIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Color Palette & Font Setup (Consistent across all pages) */
+        :root {
+            --color-dark-bg: #1a1a1a; /* Deep Charcoal */
+            --color-light-text: #f8fafc; /* Off-white */
+            --color-accent-teal: #00C2B8; /* From Graaayy-Vii logo */
+            --color-accent-gold: #FFD700; /* From Graaayy-Vii logo */
+            --color-card-bg: #212121; /* Slightly lighter dark for cards */
+            --color-light-section-bg: #2c2c2c; /* Background for sections that need contrast */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark-bg);
+            color: var(--color-light-text);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-light-text);
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-purple-800 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg tracking-wide;
+        }
+        .card {
+            @apply bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out border border-gray-700;
+        }
+        .section-heading {
+            /* Main heading for the page */
+            @apply text-5xl md:text-6xl font-extrabold text-center mb-16 leading-tight;
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .header-logo {
+            height: 40px;
+            width: auto;
+        }
+        .form-input {
+            @apply w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600;
+        }
+        /* Social icon styling for Font Awesome icons */
+        .social-icon i {
+            font-size: 2.25rem !important; /* Forces text-3xl size to match 'Find Me Online' */
+            @apply text-gray-400 hover:text-white transition duration-300;
+        }
+        /* Social icon styling for PNG images */
+        .social-icon img {
+            width: 2.25rem !important; /* Forces w-8 size to match 'Find Me Online' */
+            height: 2.25rem !important; /* Forces h-8 size to match 'Find Me Online' */
+            @apply transition duration-300;
+            /* Assuming user provides black logo on transparent background, we invert it to white */
+            filter: brightness(0) invert(1);
+        }
+        /* Hover effect for PNG images: revert filter to show original color (black) and scale up */
+        .social-icon:hover img {
+            filter: none; /* Reverts to original (black) on hover */
+            transform: scale(1.1); /* Slight scale up on hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation (Consistent across all pages) -->
+    <header class="bg-gray-900 shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="images/the-graaayy-vii-effect-logo.png" alt="The Graaayy-Vii Effect Logo" class="header-logo">
+                <span class="text-2xl font-bold text-white hidden md:block">Aries Gray</span>
+            </a>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="services.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Services</a></li>
+                    <li><a href="portfolio.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">Portfolio</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white hover:underline transition duration-300 font-medium">About</a></li>
+                    <li><a href="contact.html" class="text-blue-600 font-semibold transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Page Content -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Main H1 heading matches services.html/portfolio.html H1 size -->
+            <h1 class="text-gradient text-3xl font-bold text-center mb-16 leading-tight">Let's Connect: Your Vision, My Expertise</h1>
+
+            <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+                Ready to transform your ideas into reality? Fill out the form below or connect with me on social media.
+            </p>
+
+            <div class="card p-8 md:p-12 mb-16">
+                <h2 class="text-gradient text-3xl font-bold text-center mb-8">Send Me a Message</h2>
+                <!-- Netlify Form Integration: Add data-netlify="true" and remove action attribute -->
+                <form method="POST" data-netlify="true" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-300 text-lg font-medium mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration" class="form-input" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-300 text-lg font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project and how I can help..." class="form-input" required></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-gradient text-3xl font-bold mb-8">Find Me Online</h2>
+                <div class="flex justify-center space-x-8">
+                    <!-- LinkedIn (Font Awesome) -->
+                    <a href="https://www.linkedin.com/in/ariesgrayvillapando" target="_blank" class="social-icon" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- Facebook (Font Awesome) -->
+                    <a href="https://www.facebook.com/profile.php?id=61575994986627" target="_blank" class="social-icon" aria-label="Facebook Profile">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Instagram (Font Awesome) -->
+                    <a href="https://www.instagram.com/grey_worm4624" target="_blank" class="social-icon" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Fiverr (Font Awesome) -->
+                    <a href="https://www.fiverr.com/sellers/ariesgray0411" target="_blank" class="social-icon" aria-label="Fiverr Profile">
+                        <i class="fab fa-fiverr"></i>
+                    </a>
+                    <!-- Ko-fi (PNG Image - User must provide transparent PNG) -->
+                    <a href="https://ko-fi.com/thegraaayyviieffect" target="_blank" class="social-icon" aria-label="Ko-fi Profile">
+                        <img src="images/ko-fi-logo.png" alt="Ko-fi Logo">
+                    </a>
+                    <!-- Gumroad (PNG Image - User must provide transparent PNG) -->
+                    <a href="https://thegraaayyviieffect.gumroad.com" target="_blank" class="social-icon" aria-label="Gumroad Profile">
+                        <img src="images/gumroad-logo.png" alt="Gumroad Logo">
+                    </a>
+                    <!-- Email via mailto: (Font Awesome) -->
+                    <a href="mailto:villapandoariesgray@gmail.com" class="social-icon" aria-label="Send Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent across all pages) -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Aries Gray. All rights reserved.</p>
+            <p class="text-sm mt-2">Powered by AI Innovation & Strategic Growth.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
