@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter for body, Montserrat for headings -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome for Icons (Corrected integrity) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6TaYFAW2aeFGADyGrPkNpFDgSDcIfDraBvOJRtW7HzA4qIQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         /* Custom Color Palette & Font Setup */
         :root {
@@ -40,7 +40,8 @@
             @apply bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out border border-gray-700;
         }
         .section-heading {
-            @apply text-5xl md:text-6xl font-extrabold text-center mb-16 leading-tight;
+            /* Updated to match the size and style of "The Graaayy-Vii Effect" heading */
+            @apply text-4xl md:text-5xl font-bold text-center mb-8; /* Removed leading-tight to match exact target */
             background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -56,8 +57,16 @@
         }
         /* Specific styles for the logo */
         .header-logo {
-            height: 40px; /* Adjust as needed */
+            height: 40px; /* Reverted to 40px */
             width: auto;
+        }
+        /* Header name reverted to original size */
+        .header-name {
+            @apply text-2xl;
+        }
+        .intro-logo {
+            /* No specific max-width here, let it be default or adjust as needed for original look */
+            height: auto;
         }
         .icon-large {
             font-size: 3.5rem; /* Adjust icon size */
@@ -69,16 +78,34 @@
             background-clip: text;
             color: transparent;
         }
+        /* Social icon styling for Font Awesome icons (Copied from contact.html) */
+        .social-icon i {
+            font-size: 2.25rem !important; /* Forces text-3xl size to match 'Find Me Online' */
+            @apply text-gray-400 hover:text-white transition duration-300;
+        }
+        /* Social icon styling for PNG images (Copied from contact.html) */
+        .social-icon img {
+            width: 2.25rem !important; /* Forces w-8 size to match 'Find Me Online' */
+            height: 2.25rem !important; /* Forces h-8 size to match 'Find Me Online' */
+            @apply transition duration-300;
+            /* Assuming user provides black logo on transparent background, we invert it to white */
+            filter: brightness(0) invert(1);
+        }
+        /* Hover effect for PNG images: revert filter to show original color (black) and scale up (Copied from contact.html) */
+        .social-icon:hover img {
+            filter: none; /* Reverts to original (black) on hover */
+            transform: scale(1.1); /* Slight scale up on hover */
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header/Navigation - Enhanced for Multi-Page & Brand -->
+    <!-- Header/Navigation - Reverted to earlier state -->
     <header class="bg-gray-900 shadow-lg py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
                 <img src="images/the-graaayy-vii-effect-logo.png" alt="The Graaayy-Vii Effect Logo" class="header-logo">
-                <span class="text-2xl font-bold text-white hidden md:block">Aries Gray</span>
+                <span class="header-name font-bold text-white hidden md:block">Aries Gray</span>
             </a>
             <nav>
                 <ul class="flex space-x-8">
@@ -111,7 +138,7 @@
     <section class="py-20 md:py-32 bg-gray-900 border-t border-b border-gray-800">
         <div class="container mx-auto px-6 text-center max-w-4xl">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
-                Beyond AI Services: Introducing <span class="text-gradient"><b>The Graaayy-Vii Effect</b></span>
+                Beyond AI Services: Introducing <span class="text-5xl md:text-6xl text-gradient"><b>The Graaayy-Vii Effect</b></span>
             </h2>
             <div class="flex justify-center mb-8">
                 <img src="images/the-graaayy-vii-effect-logo.png" alt="The Graaayy-Vii Effect Logo" class="w-48 h-48 object-contain">
@@ -123,8 +150,8 @@
                 Through practical insights and actionable strategies, <b>The Graaayy-Vii Effect</b> aims to help you break free from <b><i>procrastination and the ill-do-it-later loop</i></b>, fostering a mindset of continuous improvement and achievement.
             </p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="https://ko-fi.com/thegraaayyviieffect" target="_blank" class="btn-primary bg-yellow-500 hover:bg-yellow-600">Visit Ko-fi Store</a>
-                <a href="https://thegraaayyviieffect.gumroad.com" target="_blank" class="btn-secondary border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white">Explore Gumroad Products</a>
+                <a href="https://ko-fi.com/thegraaayyviieffect" target="_blank" class="btn-primary border-yellow-500 text-yellow-500 hover:bg-yellow-600 hover:text-white">Visit Ko-fi Store</a>
+                <a href="https://thegraaayyviieffect.gumroad.com" target="_blank" class="btn-secondary border-yellow-500 text-yellow-500 hover:bg-yellow-600 hover:text-white">Explore Gumroad Products</a>
             </div>
         </div>
     </section>
@@ -132,7 +159,7 @@
     <!-- Shortened Services Section (Teaser on index.html) with Icons -->
     <section id="services-teaser" class="py-20 md:py-32 bg-gray-800">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="section-heading">My AI-Powered Services</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 section-heading">My AI-Powered Services</h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
                 I offer a curated suite of AI-powered creative and content solutions designed to boost your brand's digital presence and efficiency.
             </p>
@@ -160,7 +187,7 @@
     <!-- Shortened Portfolio Section (Teaser on index.html) -->
     <section id="portfolio-teaser" class="py-20 md:py-32 bg-gray-900">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="section-heading">My Work</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 section-heading">My Work</h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
                 Witness the power of AI through a showcase of my high-quality AI-generated images, expertly crafted prompts, and impactful AI-assisted content.
             </p>
@@ -171,7 +198,7 @@
     <!-- Shortened About Me Section (Teaser on index.html) -->
     <section id="about-teaser" class="py-20 md:py-32 bg-gray-800">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="section-heading">About Aries Gray</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 section-heading">About Aries Gray</h2>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
                 With a robust background in project management and a passion for AI, I deliver strategic, high-impact solutions that drive results.
             </p>
@@ -186,23 +213,44 @@
             <p class="text-xl mb-10">
                 Let's connect and discuss how my unique blend of AI expertise and professional dedication can bring your next vision to life.
             </p>
+            <p class="text-xl font-bold mb-2">Email Me:</p> <!-- Added "Email Me:" phrase with bold -->
             <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
-                <a href="mailto:villapandoariesgray@gmail.com" class="btn-primary bg-white text-blue-700 hover:bg-gray-100">
-                    Email Me: villapandoariesgray@gmail.com
+                <a href="mailto:villapandoariesgray@gmail.com" class="text-white hover:underline font-semibold text-lg">villapandoariesgray@gmail.com</a>
+            </div>
+            <p class="text-xl font-bold mt-12 mb-4">You can also find me here:</p> <!-- Changed to p with text-xl font-bold -->
+            <div class="flex justify-center space-x-8 mt-4">
+                <!-- LinkedIn (Font Awesome) -->
+                <a href="https://www.linkedin.com/in/ariesgrayvillapando" target="_blank" class="social-icon" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://wa.me/639457286701" target="_blank" class="btn-primary bg-white text-green-700 hover:bg-gray-100">
-                    WhatsApp: +63 945-728-6701
+                <!-- Facebook (Font Awesome) -->
+                <a href="https://www.facebook.com/profile.php?id=61575994986627" target="_blank" class="social-icon" aria-label="Facebook Profile">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- Instagram (Font Awesome) -->
+                <a href="https://www.instagram.com/grey_worm4624" target="_blank" class="social-icon" aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Fiverr (PNG Image - User must provide transparent PNG) -->
+                <a href="https://www.fiverr.com/sellers/ariesgray0411" target="_blank" class="social-icon" aria-label="Fiverr Profile">
+                    <img src="images/fiverr-logo.png" alt="Fiverr Logo"> <!-- Added Fiverr image placeholder -->
+                </a>
+                <!-- Ko-fi (PNG Image - User must provide transparent PNG) -->
+                <a href="https://ko-fi.com/thegraaayyviieffect" target="_blank" class="social-icon" aria-label="Ko-fi Profile">
+                    <img src="images/ko-fi-logo.png" alt="Ko-fi Logo">
+                </a>
+                <!-- Gumroad (PNG Image - User must provide transparent PNG) -->
+                <a href="https://thegraaayyviieffect.gumroad.com" target="_blank" class="social-icon" aria-label="Gumroad Profile">
+                    <img src="images/gumroad-logo.png" alt="Gumroad Logo">
                 </a>
             </div>
-            <p class="text-sm mt-12 opacity-80">
-                You can also find me on <a href="https://www.fiverr.com/s/o8VvP0N" target="_blank" class="underline hover:text-gray-200">Fiverr</a>.
-            </p>
+            <!-- Removed the "Go to Contact Page" button -->
         </div>
     </section>
 
     <!-- Footer (Consistent across all pages) -->
     <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t border-gray-800">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-4">
             <p>&copy; 2025 Aries Gray. All rights reserved.</p>
             <p class="text-sm mt-2">Powered by AI Innovation & Strategic Growth.</p>
         </div>
