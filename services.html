@@ -265,211 +265,182 @@
             </div>
 
                 <!-- ===== “More Services” trigger ===== -->
-             <div class="more-services">
-                 <button id="toggleMoreServices" class="btn btn-large" type="button" aria-expanded="false" aria-controls="moreServicesPanel">
-                 <i class="fas fa-layer-group" aria-hidden="true"></i> View More Services
-                 </button>
-            </div>
+                <div class="more-services">
+                    <button id="toggleMoreServices" class="btn btn-large" type="button" aria-expanded="false" aria-controls="moreServicesPanel">
+                    <i class="fas fa-layer-group" aria-hidden="true"></i> View More Services
+                    </button>
+                </div>
 
-                            /* Two-up responsive grid */
-            .services-grid {
-              display: grid;
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-              gap: 2rem;
-              margin-top: 2rem;
-            }
-            
-            @media (max-width: 900px) {
-              .services-grid { grid-template-columns: 1fr; }
-            }
-            
-            /* Card polish (uses your existing .section base) */
-            .section.service-card {
-              background: rgba(255,255,255,0.02);
-              border: 1px solid rgba(255,255,255,0.06);
-              border-radius: 12px;
-              padding: 1.25rem 1.25rem 1rem;
-            }
-            
-            .service-card h2 {
-              display: flex; align-items: center; gap: .5rem;
-              margin-top: .25rem; margin-bottom: .5rem;
-            }
-            
-            .service-icon { color: #FBBF24; } /* yellow accent */
-            
-            .cta-row .btn { margin-right: .5rem; margin-bottom: .5rem; }
-            
-            /* More Services toggle */
-            .more-services { text-align: center; margin: 2rem 0 1rem; }
-            .btn.btn-large { padding: .8rem 1.1rem; font-weight: 700; border-radius: .6rem; }
-            .more-services__panel { margin-top: 1rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
-            @media (max-width: 900px) {
-              .more-services__panel { grid-template-columns: 1fr; }
-            }
-
-
-                <!-- ===== Hidden panel with the other 13 services (same card format) ===== -->
-             <div id="moreServicesPanel" class="more-services__panel" hidden>
-
-                <!-- Automation / GoHighLevel -->
-                <section id="ai-automation" class="section service-card">
-                        <h2><i class="fas fa-robot service-icon"></i> Automation & GoHighLevel (Funnels + Sequences)</h2>
-                        <p>Design, build, and optimize lead-to-sale automations: instant follow-ups, routing, and nurturing sequences that lift conversion and remove manual work.</p>
-                        <ul>
-                          <li>Workflow design (triggers, tags, pipelines, SLAs)</li>
-                          <li>Email/SMS sequences; calendar/booking flows</li>
-                          <li>Lead routing from ads/LP to instant follow-ups</li>
-                          <li>KPI dashboards, QA, and continuous optimization</li>
-                          <li>Migration & cleanup of existing builds</li>
-                        </ul>
-                        <p class="cta-row">
-                          <a class="btn" href="/assets/pdfs/AI_Automation_CaseStudy.pdf" target="_blank" rel="noopener">Automation Case Study</a>
-                        </p>
-                      </section>
-
-                <!-- Lead Gen & Customer Operations -->
-                <section id="leadgen-ops" class="section service-card">
-                        <h2><i class="fas fa-bullseye service-icon"></i> Lead Generation & Customer Operations</h2>
-                        <p>High-volume, accurate campaign execution using CRM and Sheets—on-time launches, clean data, and measurable outcomes.</p>
-                        <ul>
-                          <li>Targeting setup & scheduling (SMS/email)</li>
-                          <li>Onboarding: list import, field mapping, SOP adherence</li>
-                          <li>Campaign QA and morning launch coordination</li>
-                          <li>HubSpot-style hygiene & pipeline updates</li>
-                          <li>Compliance-aware outbound practices</li>
-                        </ul>
-                        <p class="cta-row"><a class="btn" href="/assets/pdfs/LeadGen_Operations_CaseStudy.pdf" target="_blank" rel="noopener">Operations Case Study</a></p>
-                      </section>
-                
-                <!-- Real Estate Admin + Social -->
-                <section id="real-estate-admin" class="section service-card">
-                      <h2><i class="fas fa-building service-icon"></i> Real Estate Admin + Social Support</h2>
-                      <p>Keep the pipeline clean, the agent focused, and the brand visible—CRM discipline plus light, on-brand content.</p>
-                      <ul>
-                          <li>Salesforce pipeline management & hot lead priors</li>
-                          <li>Follow-ups; tenant screening; scheduling</li>
-                          <li>Canva posts for FB/IG/LinkedIn</li>
-                          <li>Email drips & weekly agent-ready pipeline views</li>
-                          <li>DM responses & basic list nurturing</li>
-                      </ul>
-                      <p class="cta-row"><a class="btn" href="/assets/pdfs/RealEstate_CRM_CaseStudy.pdf" target="_blank" rel="noopener">CRM Pipeline Case Study</a></p>
-                  </section>
-                
-                  <!-- Appointment Setter (AU) -->
-                  <section id="appointment-setter" class="section service-card">
-                    <h2><i class="fas fa-phone-volume service-icon"></i> Appointment Setter (AU B2B)</h2>
-                    <p>Warm lead calls with natural AU tone—book qualified meetings, keep tidy notes, and raise show rates.</p>
-                    <ul>
-                      <li>Rapport-first discovery & qualification</li>
-                      <li>Calendar coordination & hand-offs</li>
-                      <li>Zoho-style notes, outcomes, KPI tracking</li>
-                      <li>Objection handling; follow-up cadences</li>
-                      <li>ANZ business etiquette & style</li>
-                    </ul>
-                  </section>
-                
-                  <!-- Executive Assistant -->
-                  <section id="executive-assistant" class="section service-card">
-                    <h2><i class="fas fa-user-tie service-icon"></i> Executive Assistant (Ops + Digital)</h2>
-                    <p>Inbox, calendar, invoicing, reports, and light content ops—so leadership can focus on outcomes.</p>
-                    <ul>
-                      <li>HubSpot updates; Trello/Asana boards</li>
-                      <li>QuickBooks invoicing & report sends</li>
-                      <li>WordPress updates; VistaSocial scheduling</li>
-                      <li>Facebook boosts under provided targeting</li>
-                      <li>Docs, slides, and client-ready summaries</li>
-                    </ul>
-                    <p class="cta-row"><a class="btn" href="/assets/pdfs/EA_CaseStudy.pdf" target="_blank" rel="noopener">EA Case Study</a></p>
-                  </section>
-                
-                  <!-- Shopify E-commerce Assistant -->
-                  <section id="shopify-ecom" class="section service-card">
-                    <h2><i class="fas fa-store service-icon"></i> E-commerce Assistant (Shopify Wholesale)</h2>
-                    <p>Large-catalog Shopify ops: clean categorization, product stories, and retailer-ready brochures.</p>
-                    <ul>
-                      <li>Upload & categorize 1,000+ products/shipment</li>
-                      <li>Stories (origins, materials, techniques)</li>
-                      <li>Downloadable brochures & sell sheets</li>
-                      <li>Collections, tags, metafields hygiene</li>
-                      <li>Monthly UX improvements & merchandising tweaks</li>
-                    </ul>
-                    <p class="cta-row"><a class="btn" href="/assets/pdfs/Shopify_CaseStudy.pdf" target="_blank" rel="noopener">Shopify Case Study</a></p>
-                  </section>
-                
-                  <!-- Social + E-commerce (Healthcare) -->
-                  <section id="social-ecom" class="section service-card">
-                    <h2><i class="fas fa-heartbeat service-icon"></i> Social Media & E-commerce (Healthcare)</h2>
-                    <p>Grow community & sales with weekly launches, WordPress updates, and clear, accessible content.</p>
-                    <ul>
-                      <li>FB/IG programming; community care</li>
-                      <li>Weekly product launches; LPs & assets</li>
-                      <li>WordPress updates; UX polish; basic SEO</li>
-                      <li>Performance tracking & iteration</li>
-                      <li>Brand-safe voice & visuals</li>
-                    </ul>
-                  </section>
-                
-                  <!-- Chat Support -->
-                  <section id="chat-support" class="section service-card">
-                    <h2><i class="fas fa-comments service-icon"></i> Chat Support (Sales-Oriented)</h2>
-                    <p>Turn conversations into conversions—fast, friendly, documented. Objection-handling without pressure and clean CRM notes.</p>
-                    <ul>
-                      <li>Zendesk/Intercom/HubSpot chat flows</li>
-                      <li>Product matching, add-ons, soft close</li>
-                      <li>Multi-chat handling; tone & grammar QC</li>
-                      <li>Lead capture + follow-up tasks</li>
-                      <li>KPI reporting (AHT, CSAT, CVR)</li>
-                    </ul>
-                  </section>
-                
-                  <!-- Data Entry -->
-                  <section id="data-entry" class="section service-card">
-                    <h2><i class="fas fa-keyboard service-icon"></i> Data Entry & Research</h2>
-                    <p>Volume, speed, and accuracy—under compliance. Perfect for applicant research and structured datasets.</p>
-                    <ul>
-                      <li>99%+ accuracy on repetitive workloads</li>
-                      <li>Web research → normalized fields</li>
-                      <li>Excel/Sheets templates & validations</li>
-                      <li>Confidential data handling</li>
-                      <li>Turnaround SLAs and QC checks</li>
-                    </ul>
-                  </section>
-                
-                  <!-- Immigration: High-Ticket Sales -->
-                  <section id="immigration-sales" class="section service-card">
-                    <h2><i class="fas fa-passport service-icon"></i> Sales Manager (High-Ticket, Immigration)</h2>
-                    <p>Trust-first, process-driven sales for international clientele. Funnel hygiene, compliance awareness, and CRM visibility.</p>
-                    <ul>
-                      <li>High-ticket funnel structuring & reporting</li>
-                      <li>ActiveCampaign pipelines & automations</li>
-                      <li>WhatsApp + integrated comms workflows</li>
-                      <li>Founder reports: pipeline & forecast</li>
-                      <li>Playbooks & training for team scaling</li>
-                    </ul>
-                    <p class="cta-row"><a class="btn" href="/assets/pdfs/SalesManager_HighTicket_CaseStudy.pdf" target="_blank" rel="noopener">High-Ticket Case Study</a></p>
-                  </section>
-
-                  <script>
+                    <script>
                       (function () {
                         const btn = document.getElementById('toggleMoreServices');
                         const panel = document.getElementById('moreServicesPanel');
                     
-                        function toggle() {
-                          const expanded = btn.getAttribute('aria-expanded') === 'true';
+                       function toggle() {
+                        const expanded = btn.getAttribute('aria-expanded') === 'true';
                           btn.setAttribute('aria-expanded', String(!expanded));
-                          if (expanded) {
-                            panel.setAttribute('hidden', '');
-                            btn.innerHTML = '<i class="fas fa-layer-group"></i> View More Services';
-                          } else {
-                            panel.removeAttribute('hidden');
-                            btn.innerHTML = '<i class="fas fa-layer-group"></i> Hide More Services';
-                            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                          }
+                        if (expanded) {
+                          panel.setAttribute('hidden', '');
+                          btn.innerHTML = '<i class="fas fa-layer-group"></i> View More Services';
+                        } else {
+                          panel.removeAttribute('hidden');
+                          btn.innerHTML = '<i class="fas fa-layer-group"></i> Hide More Services';
+                          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                         }
                         btn.addEventListener('click', toggle);
                       })();
                     </script>
+
+                <!-- ===== Hidden panel with the other 13 services (same card format) ===== -->
+                <div id="moreServicesPanel" class="more-services__panel" hidden>
+            
+                <!-- Automation / GoHighLevel -->
+                <div class="card flex flex-col items-center text-center">
+                    <i class="fas fa-robot service-icon"></i>
+                    <h2 class="text-2xl font-bold text-white mb-4">Automation & GoHighLevel (Funnels + Sequences)</h2>
+                    <p class="text-gray-400 mb-4">
+                        Design, build, and optimize lead-to-sale automations: instant follow-ups, routing, and nurturing sequences that lift conversion and remove manual work.
+                    </p>
+                    <ul class="service-list list-disc list-inside text-gray-400 space-y-2 text-base">
+                        <li>Workflow design (triggers, tags, pipelines, SLAs)</li>
+                        <li>Email/SMS sequences; calendar/booking flows</li>
+                        <li>Lead routing from ads/LP to instant follow-ups</li>
+                        <li>KPI dashboards, QA, and continuous optimization</li>
+                        <li>Migration & cleanup of existing builds</li>
+                    </ul>
+                    <p class="cta-row">
+                        <a class="btn" href="/assets/pdfs/AI_Automation_CaseStudy.pdf" target="_blank" rel="noopener">Automation Case Study</a>
+                    </p>
+                </div>
+                    
+                <!-- Lead Gen & Customer Operations -->
+                <div class="card flex flex-col items-center text-center">
+                    <section id="leadgen-ops" class="section service-card">
+                    <i class="fas fa-bullseye service-icon"></i>
+                    <h2 class="text-2xl font-bold text-white mb-4">Lead Generation & Customer Operations</h2>
+                    <p class="text-gray-400 mb-4">
+                        High-volume, accurate campaign execution using CRM and Sheets—on-time launches, clean data, and measurable outcomes.
+                    </p>
+                    <ul class="service-list list-disc list-inside text-gray-400 space-y-2 text-base">
+                        <li>Targeting setup & scheduling (SMS/email)</li>
+                        <li>Onboarding: list import, field mapping, SOP adherence</li>
+                        <li>Campaign QA and morning launch coordination</li>
+                        <li>HubSpot-style hygiene & pipeline updates</li>
+                        <li>Compliance-aware outbound practices</li>
+                    </ul>
+                    <p class="cta-row">
+                        <a class="btn" href="/assets/pdfs/LeadGen_Operations_CaseStudy.pdf" target="_blank" rel="noopener">Operations Case Study</a>
+                    </p>
+                    </section>
+            
+                <!-- Real Estate Admin + Social -->
+              <section id="real-estate-admin" class="section service-card">
+                <h2><i class="fas fa-building service-icon"></i> Real Estate Admin + Social Support</h2>
+                <p>Keep the pipeline clean, the agent focused, and the brand visible—CRM discipline plus light, on-brand content.</p>
+                <ul>
+                  <li>Salesforce pipeline management & hot lead priors</li>
+                  <li>Follow-ups; tenant screening; scheduling</li>
+                  <li>Canva posts for FB/IG/LinkedIn</li>
+                  <li>Email drips & weekly agent-ready pipeline views</li>
+                  <li>DM responses & basic list nurturing</li>
+                </ul>
+                <p class="cta-row"><a class="btn" href="/assets/pdfs/RealEstate_CRM_CaseStudy.pdf" target="_blank" rel="noopener">CRM Pipeline Case Study</a></p>
+              </section>
+            
+                <!-- Appointment Setter (AU) -->
+              <section id="appointment-setter" class="section service-card">
+                <h2><i class="fas fa-phone-volume service-icon"></i> Appointment Setter (AU B2B)</h2>
+                <p>Warm lead calls with natural AU tone—book qualified meetings, keep tidy notes, and raise show rates.</p>
+                <ul>
+                  <li>Rapport-first discovery & qualification</li>
+                  <li>Calendar coordination & hand-offs</li>
+                  <li>Zoho-style notes, outcomes, KPI tracking</li>
+                  <li>Objection handling; follow-up cadences</li>
+                  <li>ANZ business etiquette & style</li>
+                </ul>
+              </section>
+            
+                <!-- Executive Assistant -->
+              <section id="executive-assistant" class="section service-card">
+                <h2><i class="fas fa-user-tie service-icon"></i> Executive Assistant (Ops + Digital)</h2>
+                <p>Inbox, calendar, invoicing, reports, and light content ops—so leadership can focus on outcomes.</p>
+                <ul>
+                  <li>HubSpot updates; Trello/Asana boards</li>
+                  <li>QuickBooks invoicing & report sends</li>
+                  <li>WordPress updates; VistaSocial scheduling</li>
+                  <li>Facebook boosts under provided targeting</li>
+                  <li>Docs, slides, and client-ready summaries</li>
+                </ul>
+                <p class="cta-row"><a class="btn" href="/assets/pdfs/EA_CaseStudy.pdf" target="_blank" rel="noopener">EA Case Study</a></p>
+              </section>
+            
+                <!-- Shopify E-commerce Assistant -->
+              <section id="shopify-ecom" class="section service-card">
+                <h2><i class="fas fa-store service-icon"></i> E-commerce Assistant (Shopify Wholesale)</h2>
+                <p>Large-catalog Shopify ops: clean categorization, product stories, and retailer-ready brochures.</p>
+                <ul>
+                  <li>Upload & categorize 1,000+ products/shipment</li>
+                  <li>Stories (origins, materials, techniques)</li>
+                  <li>Downloadable brochures & sell sheets</li>
+                  <li>Collections, tags, metafields hygiene</li>
+                  <li>Monthly UX improvements & merchandising tweaks</li>
+                </ul>
+                <p class="cta-row"><a class="btn" href="/assets/pdfs/Shopify_CaseStudy.pdf" target="_blank" rel="noopener">Shopify Case Study</a></p>
+              </section>
+            
+                <!-- Social + E-commerce (Healthcare) -->
+              <section id="social-ecom" class="section service-card">
+                <h2><i class="fas fa-heartbeat service-icon"></i> Social Media & E-commerce (Healthcare)</h2>
+                <p>Grow community & sales with weekly launches, WordPress updates, and clear, accessible content.</p>
+                <ul>
+                  <li>FB/IG programming; community care</li>
+                  <li>Weekly product launches; LPs & assets</li>
+                  <li>WordPress updates; UX polish; basic SEO</li>
+                  <li>Performance tracking & iteration</li>
+                  <li>Brand-safe voice & visuals</li>
+                </ul>
+              </section>
+            
+                <!-- Chat Support -->
+              <section id="chat-support" class="section service-card">
+                <h2><i class="fas fa-comments service-icon"></i> Chat Support (Sales-Oriented)</h2>
+                <p>Turn conversations into conversions—fast, friendly, documented. Objection-handling without pressure and clean CRM notes.</p>
+                <ul>
+                  <li>Zendesk/Intercom/HubSpot chat flows</li>
+                  <li>Product matching, add-ons, soft close</li>
+                  <li>Multi-chat handling; tone & grammar QC</li>
+                  <li>Lead capture + follow-up tasks</li>
+                  <li>KPI reporting (AHT, CSAT, CVR)</li>
+                </ul>
+              </section>
+            
+                <!-- Data Entry -->
+              <section id="data-entry" class="section service-card">
+                <h2><i class="fas fa-keyboard service-icon"></i> Data Entry & Research</h2>
+                <p>Volume, speed, and accuracy—under compliance. Perfect for applicant research and structured datasets.</p>
+                <ul>
+                  <li>99%+ accuracy on repetitive workloads</li>
+                  <li>Web research → normalized fields</li>
+                  <li>Excel/Sheets templates & validations</li>
+                  <li>Confidential data handling</li>
+                  <li>Turnaround SLAs and QC checks</li>
+                </ul>
+              </section>
+            
+                <!-- Immigration: High-Ticket Sales -->
+              <section id="immigration-sales" class="section service-card">
+                <h2><i class="fas fa-passport service-icon"></i> Sales Manager (High-Ticket, Immigration)</h2>
+                <p>Trust-first, process-driven sales for international clientele. Funnel hygiene, compliance awareness, and CRM visibility.</p>
+                <ul>
+                  <li>High-ticket funnel structuring & reporting</li>
+                  <li>ActiveCampaign pipelines & automations</li>
+                  <li>WhatsApp + integrated comms workflows</li>
+                  <li>Founder reports: pipeline & forecast</li>
+                  <li>Playbooks & training for team scaling</li>
+                </ul>
+                <p class="cta-row"><a class="btn" href="/assets/pdfs/SalesManager_HighTicket_CaseStudy.pdf" target="_blank" rel="noopener">High-Ticket Case Study</a></p>
+              </section>
                 
                 </div>
                 
@@ -494,6 +465,7 @@
                 
                 </body>
                 </html>
+
 
 
 
