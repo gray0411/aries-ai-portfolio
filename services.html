@@ -411,6 +411,27 @@
                     </ul>
                     <p class="cta-row"><a class="btn" href="/assets/pdfs/SalesManager_HighTicket_CaseStudy.pdf" target="_blank" rel="noopener">High-Ticket Case Study</a></p>
                   </section>
+
+                  <script>
+                      (function () {
+                        const btn = document.getElementById('toggleMoreServices');
+                        const panel = document.getElementById('moreServicesPanel');
+                    
+                        function toggle() {
+                          const expanded = btn.getAttribute('aria-expanded') === 'true';
+                          btn.setAttribute('aria-expanded', String(!expanded));
+                          if (expanded) {
+                            panel.setAttribute('hidden', '');
+                            btn.innerHTML = '<i class="fas fa-layer-group"></i> View More Services';
+                          } else {
+                            panel.removeAttribute('hidden');
+                            btn.innerHTML = '<i class="fas fa-layer-group"></i> Hide More Services';
+                            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }
+                        btn.addEventListener('click', toggle);
+                      })();
+                    </script>
                 
                 </div>
                 
@@ -435,6 +456,7 @@
                 
                 </body>
                 </html>
+
 
 
 
