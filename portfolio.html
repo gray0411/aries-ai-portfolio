@@ -115,73 +115,6 @@
         </div>
     </header>
 
-    <!-- FILTERS -->
-<div class="filters" style="margin:1rem 0;">
-  <button data-filter="all" class="btn">All</button>
-  <button data-filter="ai" class="btn">AI & Creative</button>
-  <button data-filter="bookkeeping" class="btn">Bookkeeping</button>
-</div>
-
-<!-- BOOKKEEPING CARDS -->
-<section class="grid">
-
-  <!-- CS5: Reconciliation Practice (Mock) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Bank Reconciliation (Mock Client)</h3>
-    <p>Matched bank vs ledger, corrected dates/amounts; final ledger = bank balance ₱22,700.</p>
-    <p>
-      <a class="btn" href="/assets/pdfs/Reconciliation_Report_Aries_Villapando.pdf" target="_blank">See Report (PDF)</a>
-    </p>
-  </article>
-
-  <!-- CS6: Reconciliation Report (Final) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Client Summary Report</h3>
-    <p>1-page reconciliation summary a business owner can understand at a glance.</p>
-    <p><a class="btn" href="/assets/pdfs/Bookkeeping_Portfolio_1Pager_Aries_Villapando.pdf" target="_blank">View 1-Pager</a></p>
-  </article>
-
-  <!-- CS1: JPMorgan (transferable) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Transaction Review & Accuracy (JPMorgan)</h3>
-    <p>Reviewed thousands of transactions; reduced exposure by 38%. Relevance: categorization & integrity.</p>
-  </article>
-
-  <!-- CS2: Synchrony (transferable) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Account Reconciliation (Synchrony)</h3>
-    <p>Managed reconciliations & repayment schedules. Relevance: accurate balances & reporting.</p>
-  </article>
-
-  <!-- CS3: PayPal (transferable) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Client-Facing Adjustments (PayPal)</h3>
-    <p>Handled 75+ cases/day; precise account updates with high CSAT. Relevance: client-facing bookkeeping.</p>
-  </article>
-
-  <!-- CS4: Noontide (transferable) -->
-  <article class="card" data-category="bookkeeping">
-    <h3>Multi-Client Expense Tracking (Noontide)</h3>
-    <p>Tracked 120+ yearly projects; +32% workflow efficiency. Relevance: multi-client books.</p>
-  </article>
-
-</section>
-
-<!-- TINY FILTER SCRIPT -->
-<script>
-  (function(){
-    const btns = document.querySelectorAll('[data-filter]');
-    const cards = document.querySelectorAll('.card');
-    btns.forEach(btn => btn.addEventListener('click', () => {
-      const f = btn.dataset.filter;
-      cards.forEach(c => {
-        const cat = (c.dataset.category || "");
-        c.style.display = (f === 'all' || cat.includes(f)) ? '' : 'none';
-      });
-    }));
-  })();
-</script>
-
     <!-- Portfolio Page Content -->
     <main class="py-16 md:py-24">
         <div class="container mx-auto px-6 max-w-5xl">
@@ -283,4 +216,5 @@
 
 </body>
 </html>
+
 
